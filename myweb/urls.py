@@ -3,9 +3,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import jobs.views
+import control_panel.views
 
 urlpatterns = [
     path('', jobs.views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    path('controlpanel/', control_panel.views.control_panel),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
