@@ -4,13 +4,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 import myweb.views
 import jobs.views
-import control_panel.views
+import wordcounter.views
 
 
 urlpatterns = [
-    path('', myweb.views.my_web_home_page, name='home_page'),
-    path('jobs/', jobs.views.home, name='jobs'),
     path('admin/', admin.site.urls),
+    path('jobs/', jobs.views.home, name='jobs'),
     path('blog/', include('blog.urls')),
-    path('controlpanel/', control_panel.views.control_panel, name='controlpanel'),
+    path('', myweb.views.my_web_home_page, name='home_page'),
+    path('wordcounter/', wordcounter.views.wordcounter, name='wordcounter'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

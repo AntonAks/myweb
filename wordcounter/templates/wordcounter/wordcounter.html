@@ -1,0 +1,25 @@
+<!doctype html>
+{% extends 'base_page.html' %}
+
+{% block content %}
+
+<h1>THIS IS THE HOME PAGE</h1>
+<h2>Hello World</h2>
+
+<form action="">
+  <textarea name="input" rows="8" cols="80"></textarea>
+  <br />
+  <input type="submit" value="Submit"></input>
+</form>
+
+<br />
+
+<h2>Text form home page:</h2>
+{{ text }}
+<br />
+<h2>There are {{ words_number }} word(s) in your text, and {{ words_number_unique }} are unique. </h2>
+<br />
+<h3> Words by frequancy:</h3>
+{{ words_dict }}
+
+{% endblock %}
