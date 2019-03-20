@@ -25,6 +25,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'sandbox.apps.SandboxConfig',
     'wordcounter.apps.WordcounterConfig',
     'blog.apps.BlogConfig',
     'jobs.apps.JobsConfig',

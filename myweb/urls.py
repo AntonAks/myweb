@@ -13,4 +13,5 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('', myweb.views.my_web_home_page, name='home_page'),
     path('wordcounter/', wordcounter.views.wordcounter, name='wordcounter'),
+    path('sandbox/', include('sandbox.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
